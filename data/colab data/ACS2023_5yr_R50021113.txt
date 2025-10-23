@@ -1,0 +1,310 @@
+--------------------------------------------------------------------------------
+Codebook for Social Explorer report ID: R50021113
+--------------------------------------------------------------------------------
+
+Contents
+    - Table Summary
+    - Data Dictionary
+    - Citation and Use
+
+
+--------------------------------------------------------------------------------
+Table Summary
+--------------------------------------------------------------------------------
+ 
+Survey:           ACS 2023 (5-Year Estimates)
+Dataset:          Social Explorer Tables: ACS 2023 (5-Year Estimates)
+Tables:
+
+      1. Total Population
+         Universe:  Total Population
+         Name:      A00001
+         Variables:
+            A00001_001:   Total Population
+
+
+      2. Race
+         Universe:  Total Population
+         Name:      A03001
+         Variables:
+            A03001_001:   Total Population:
+            A03001_002:      White Alone
+            A03001_003:      Black or African American Alone
+            A03001_004:      American Indian and Alaska Native Alone
+            A03001_005:      Asian Alone
+            A03001_006:      Native Hawaiian and Other Pacific Islander Alone
+            A03001_007:      Some Other Race Alone
+            A03001_008:      Two or More Races
+
+
+      3. Hispanic or Latino by Race
+         Universe:  Total Population
+         Name:      A04001
+         Variables:
+            A04001_001:   Total Population
+            A04001_002:      Not Hispanic or Latino:
+            A04001_003:         White Alone
+            A04001_004:         Black or African American Alone
+            A04001_005:         American Indian and Alaska Native Alone
+            A04001_006:         Asian Alone
+            A04001_007:         Native Hawaiian and Other Pacific Islander Alone
+            A04001_008:         Some Other Race Alone
+            A04001_009:         Two or More Races
+            A04001_010:      Hispanic or Latino:
+            A04001_011:         White Alone
+            A04001_012:         Black or African American Alone
+            A04001_013:         American Indian and Alaska Native Alone
+            A04001_014:         Asian Alone
+            A04001_015:         Native Hawaiian and Other Pacific Islander Alone
+            A04001_016:         Some Other Race Alone
+            A04001_017:         Two or More Races
+
+
+      4. Household Income (In <DollarYear> Inflation Adjusted Dollars)
+         Universe:  Households
+         Name:      A14001
+         Variables:
+            A14001_001:   Households:
+            A14001_002:      Less than $10,000
+            A14001_003:      $10,000 to $14,999
+            A14001_004:      $15,000 to $19,999
+            A14001_005:      $20,000 to $24,999
+            A14001_006:      $25,000 to $29,999
+            A14001_007:      $30,000 to $34,999
+            A14001_008:      $35,000 to $39,999
+            A14001_009:      $40,000 to $44,999
+            A14001_010:      $45,000 to $49,999
+            A14001_011:      $50,000 to $59,999
+            A14001_012:      $60,000 to $74,999
+            A14001_013:      $75,000 to $99,999
+            A14001_014:      $100,000 to $124,999
+            A14001_015:      $125,000 to $149,999
+            A14001_016:      $150,000 to $199,999
+            A14001_017:      $200,000 or More
+
+
+      5. Median Household Income (In <DollarYear> Inflation Adjusted Dollars)
+         Universe:  Households
+         Name:      A14006
+         Variables:
+            A14006_001:   Median Household Income (In 2023 Inflation Adjusted Dollars)
+
+
+      6. Average Household Income (In <DollarYear> Inflation Adjusted Dollars)
+         Universe:  Households
+         Name:      A14008
+         Variables:
+            A14008_001:   Average Household Income (In 2023 Inflation Adjusted Dollars)
+
+
+      7. White vs Non-White Homeowners
+         Universe:  Owner Occupied Housing Units
+         Name:      B10060
+         Variables:
+            B10060_001:   Owner Occupied Housing Units:
+            B10060_002:      White Alone, Not Hispanic or Latino Homeowners 
+            B10060_003:      Non-White Homeowners
+
+
+      8. Residents Paying More Than 30% or at least 50% of Income on Rent
+         Universe:  Renter-Occupied Housing Units
+         Name:      B18002
+         Variables:
+            B18002_001:   Renter-Occupied Housing Units:
+            B18002_002:      30 to 49 Percent
+            B18002_003:      50 percent or More
+
+
+      9. Residents Paying More Than 30% or at least 50% of Income on Selected Home Ownership Expenses
+         Universe:  Owner-Occupied Housing Units
+         Name:      B10040
+         Variables:
+            B10040_001:   Owner-Occupied Housing Units:
+            B10040_002:      Homeowners Who are Paying at Least 30% of Income for Ownership Costs
+            B10040_003:      Homeowners Who are Paying at Least 50% of Income for Ownership Costs
+
+
+      10. Monthly Housing Cost (Renter-Occupied Housing Units)
+          Universe:  Universe:  Renter-occupied housing units
+          Name:      A10038
+          Variables:
+             A10038_001:   Renter-Occupied Housing Units:
+             A10038_002:      Less than $300
+             A10038_003:      $300 to $499
+             A10038_004:      $500 to $799
+             A10038_005:      $800 to $999
+             A10038_006:      $1,000 to $1,499
+             A10038_007:      $1,500 to $1,999
+             A10038_008:      $2,000 to $2,499
+             A10038_009:      $2,500 to $2,999
+             A10038_010:      $3,000 or More
+             A10038_011:      No Cash Rent
+
+
+      11. Ratio of Income in 2023 to Poverty Level
+          Universe:  Population for whom poverty status Is determined
+          Name:      A13004
+          Variables:
+             A13004_001:   Population for Whom Poverty Status Is Determined:
+             A13004_002:      Under .50
+             A13004_003:      .50 to .74
+             A13004_004:      .75 to .99
+             A13004_005:      1.00 to 1.49
+             A13004_006:      1.50 to 1.99
+             A13004_007:      2.00 and Over
+
+
+
+
+
+ 
+ 
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Variables 
+      Geo__geoid_:    FIPS
+      Geo_qname:      Qualified Area Name
+      Geo_STUSAB:     State Postal Abbreviation
+      Geo_SUMLEV:     Summary Level
+      Geo_GEOCOMP:    Geographic Component
+      Geo_US:         US
+      Geo_REGION:     Census Region
+      Geo_DIVISION:   Census Division
+      Geo_STATE:      State (FIPS Code)
+      Geo_COUNTY:     County of current residence
+      Geo_COUSUB:     County Subdivision (FIPS)
+      Geo_PLACE:      Place (FIPS Code)
+      Geo_TRACT:      Census Tract
+      Geo_BLKGRP:     Block Group
+      Geo_CONCIT:     Consolidated City
+      Geo_AIANHH:     American Indian Area/Alaska Native Area/ Hawaiian Home Land (Census)
+      Geo_AIANHHFP:   American Indian Area/Alaska Native Area/ Hawaiian Home Land (FIPS)
+      Geo_AIHHTLI:    American Indian Trust Land/Hawaiian Home Land Indicator
+      Geo_AITS:       American Indian Tribal Subdivision (FIPS)
+      Geo_ANRC:       Alaska Native Regional Corporation (FIPS)
+      Geo_CBSA:       Metropolitan and Micropolitan Statistical Area
+      Geo_CSA:        Combined Statistical Area
+      Geo_METDIV:     Metropolitan Statistical Area-Metropolitan Division
+      Geo_MACC:       Metropolitan Area Central City
+      Geo_MEMI:       Metropolitan/Micropolitan Indicator Flag
+      Geo_NECTA:      New England City and Town Area
+      Geo_CNECTA:     New England City and Town Combined Statistical Area
+      Geo_NECTADIV:   New England City and Town Area Division
+      Geo_UA:         Urban Area
+      Geo_CDCURR:     Current Congressional District ***
+      Geo_SLDU:       State Legislative District Upper
+      Geo_SLDL:       State Legislative District Lower
+      Geo_ZCTA3:      ZIP Code Tabulation Area (3-digit)
+      Geo_ZCTA5:      5-digit ZIP Code Tabulation Area
+      Geo_SUBMCD:     Subminor Civil Division (FIPS)
+      Geo_SDELM:      State-School District (Elementary)
+      Geo_SDSEC:      State-School District (Secondary)
+      Geo_SDUNI:      State-School District (Unified)
+      Geo_UR:         Urban/Rural
+      Geo_PCI:        Principal City Indicator
+      Geo_PUMA5:      Public Use Microdata Area – 5% File
+      Geo_GEO_ID:     Geographic Identifier
+      Geo_NAME:       Area Name
+      Geo_BTTR:       Tribal Tract
+      Geo_BTBG:       Tribal Block Group
+      Geo_PLACESE:    Place (State FIPS + Place FIPS)
+      SE_A00001_001:  Total Population
+      SE_A03001_001:  Total Population:
+      SE_A03001_002:  Total Population: White Alone
+      SE_A03001_003:  Total Population: Black or African American Alone
+      SE_A03001_004:  Total Population: American Indian and Alaska Native Alone
+      SE_A03001_005:  Total Population: Asian Alone
+      SE_A03001_006:  Total Population: Native Hawaiian and Other Pacific Islander Alone
+      SE_A03001_007:  Total Population: Some Other Race Alone
+      SE_A03001_008:  Total Population: Two or More Races
+      SE_A04001_001:  Total Population
+      SE_A04001_002:  Total Population: Not Hispanic or Latino
+      SE_A04001_003:  Total Population: Not Hispanic or Latino: White Alone
+      SE_A04001_004:  Total Population: Not Hispanic or Latino: Black or African American Alone
+      SE_A04001_005:  Total Population: Not Hispanic or Latino: American Indian and Alaska Native Alone
+      SE_A04001_006:  Total Population: Not Hispanic or Latino: Asian Alone
+      SE_A04001_007:  Total Population: Not Hispanic or Latino: Native Hawaiian and Other Pacific Islander Alone
+      SE_A04001_008:  Total Population: Not Hispanic or Latino: Some Other Race Alone
+      SE_A04001_009:  Total Population: Not Hispanic or Latino: Two or More Races
+      SE_A04001_010:  Total Population: Hispanic or Latino
+      SE_A04001_011:  Total Population: Hispanic or Latino: White Alone
+      SE_A04001_012:  Total Population: Hispanic or Latino: Black or African American Alone
+      SE_A04001_013:  Total Population: Hispanic or Latino: American Indian and Alaska Native Alone
+      SE_A04001_014:  Total Population: Hispanic or Latino: Asian Alone
+      SE_A04001_015:  Total Population: Hispanic or Latino: Native Hawaiian and Other Pacific Islander Alone
+      SE_A04001_016:  Total Population: Hispanic or Latino: Some Other Race Alone
+      SE_A04001_017:  Total Population: Hispanic or Latino: Two or More Races
+      SE_A14001_001:  Households:
+      SE_A14001_002:  Households: Less than $10,000
+      SE_A14001_003:  Households: $10,000 to $14,999
+      SE_A14001_004:  Households: $15,000 to $19,999
+      SE_A14001_005:  Households: $20,000 to $24,999
+      SE_A14001_006:  Households: $25,000 to $29,999
+      SE_A14001_007:  Households: $30,000 to $34,999
+      SE_A14001_008:  Households: $35,000 to $39,999
+      SE_A14001_009:  Households: $40,000 to $44,999
+      SE_A14001_010:  Households: $45,000 to $49,999
+      SE_A14001_011:  Households: $50,000 to $59,999
+      SE_A14001_012:  Households: $60,000 to $74,999
+      SE_A14001_013:  Households: $75,000 to $99,999
+      SE_A14001_014:  Households: $100,000 to $124,999
+      SE_A14001_015:  Households: $125,000 to $149,999
+      SE_A14001_016:  Households: $150,000 to $199,999
+      SE_A14001_017:  Households: $200,000 or More
+      SE_A14006_001:  Median Household Income (In 2023 Inflation Adjusted Dollars)
+      SE_A14008_001:  Average Household Income (In 2023 Inflation Adjusted Dollars)
+      SE_B10060_001:  Owner Occupied Housing Units
+      SE_B10060_002:  Owner Occupied Housing Units: White Alone, Not Hispanic or Latino Homeowners 
+      SE_B10060_003:  Owner Occupied Housing Units: Non-White Homeowners
+      SE_B18002_001:  Renter-Occupied Housing Units
+      SE_B18002_002:  Renter-Occupied Housing Units: 30 to 49 Percent
+      SE_B18002_003:  Renter-Occupied Housing Units: 50 percent or More
+      SE_B10040_001:  Owner-Occupied Housing Units
+      SE_B10040_002:  Owner-Occupied Housing Units: Homeowners Who are Paying at Least 30% of Income for Ownership Costs
+      SE_B10040_003:  Owner-Occupied Housing Units: Homeowners Who are Paying at Least 50% of Income for Ownership Costs
+      SE_A10038_001:  Renter-Occupied Housing Units
+      SE_A10038_002:  Renter-Occupied Housing Units: Less than $300
+      SE_A10038_003:  Renter-Occupied Housing Units: $300 to $499
+      SE_A10038_004:  Renter-Occupied Housing Units: $500 to $799
+      SE_A10038_005:  Renter-Occupied Housing Units: $800 to $999
+      SE_A10038_006:  Renter-Occupied Housing Units: $1,000 to $1,499
+      SE_A10038_007:  Renter-Occupied Housing Units: $1,500 to $1,999
+      SE_A10038_008:  Renter-Occupied Housing Units: $2,000 to $2,499
+      SE_A10038_009:  Renter-Occupied Housing Units: $2,500 to $2,999
+      SE_A10038_010:  Renter-Occupied Housing Units: $3,000 or More
+      SE_A10038_011:  Renter-Occupied Housing Units: No Cash Rent
+      SE_A13004_001:  Population for Whom Poverty Status Is Determined:
+      SE_A13004_002:  Population for Whom Poverty Status Is Determined: Under .50
+      SE_A13004_003:  Population for Whom Poverty Status Is Determined: .50 to .74
+      SE_A13004_004:  Population for Whom Poverty Status Is Determined: .75 to .99
+      SE_A13004_005:  Population for Whom Poverty Status Is Determined: 1.00 to 1.49
+      SE_A13004_006:  Population for Whom Poverty Status Is Determined: 1.50 to 1.99
+      SE_A13004_007:  Population for Whom Poverty Status Is Determined: 2.00 and Over
+
+
+
+
+--------------------------------------------------------------------------------
+Citation and Use of Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data
+  must cite it appropriately. The citation should include the following:
+
+	  www.socialexplorer.com
+	  New York City, NY: Social Explorer 2025
+
+
+* Citations should also include the URL for this report.
+
+If you have any questions contact info@socialexplorer.com
+ 
+--------------------------------------------------------------------------------
+Compiler version: 2.2.9.0
+Last compiled on: 2025-06-10 09:02:39Z

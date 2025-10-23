@@ -2,14 +2,78 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Map Test</title>
+    <title>San Mateo Evictions Map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
   </head>
+
   <body>
-    <div id="map"></div>
+
+    <nav id="nav-links">
+      <a href="index.html">Evictions Map</a>
+      <a href="income.html">Income Map</a>
+      <a href="race.html">Race Map</a> 
+    </nav>
+
+    <div id="year-buttons">
+      <button id="btn-2019" class="year-btn active">2019</button>
+      <button id="btn-2023" class="year-btn">2023</button>
+      <button id="btn-both" class="year-btn">Both</button>
+    </div>
+
+
+
+
+    <!-- Comparison (Swipe) Container -->
+    <div id="comparison-container">
+      <div id="map-2019" class="map"></div>
+      <div id="map-2023" class="map"></div>
+    </div>
+
+      <!-- Dashboard Panel -->
+  <div id="dashboard-panel">
+    <h3 id="panel-city">Select a city</h3>
+    <p><strong>Year:</strong> <span id="panel-year">—</span></p>
+    <p><strong>ZIP Code:</strong> <span id="panel-zip">—</span></p>
+    <p><strong>Eviction Count:</strong> <span id="panel-count">—</span></p>
+
+    <!-- Chart 1: Basis for UD Notice -->
+  <canvas id="basisChart" width="200" height="150"></canvas>
+
+  <!-- Chart 2: Case Disposition -->
+  <canvas id="caseChart" width="1000" height="1000"></canvas>
+
+
+  </div>
+
+    <!-- Info box -->
+    <div id="info-box">
+      <button id="close-info">✕</button> <!-- 👈 Add this -->
+      <h3 id="info-city">Click a county</h3>
+      <p><strong>ZIP code:</strong> <span id="info-zip">—</span></p>
+      <p><strong>Year:</strong> <span id="info-year">—</span></p>
+      <p><strong>Eviction count:</strong> <span id="info-count">—</span></p>
+    </div>
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+    <!-- Mapbox Scripts -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your Custom Map Logic -->
     <script src="map.js"></script>
+
+    
+
   </body>
 </html>

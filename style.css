@@ -1,31 +1,238 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: monospace;    
-}                
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Yu Gothic', sans-serif;
+}
 
+/* Map container */
 #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
 }
 
-#info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px 10px auto auto;    /* top right bottom left */
-    padding: 5px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 12px;
-    text-align: center;
-    color: #222;
-    background: #fff;
+#comparison-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
 }
+
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Year labels */
+.swipe-label {
+  position: absolute;
+  bottom: 20px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'Yu Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.swipe-label.left {
+  left: 20px;
+}
+
+.swipe-label.right {
+  right: 20px;
+}
+
+/* Dashboard-style side panel */
+#dashboard-panel {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 👈 the lift/shadow */
+  padding: 16px 20px;
+  font-family: 'Yu Gothic', sans-serif;
+  z-index: 15;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.95;
+}
+
+#dashboard-panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+#dashboard-panel p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.mapboxgl-canvas {
+  cursor: default !important; /* changes the white glove to an arrow */
+}
+
+
+
+/* Force override of Compare swiper defaults */
+#comparison-container .compare-swiper {
+  background-color: #b0b0b0 !important; /* light gray line */
+  width: 3px !important;                /* thinner handle */
+  border: none !important;
+  z-index: 20 !important;               /* stay above map layers */
+}
+
+/* Make the draggable circles (pseudo-elements) gray too */
+#comparison-container .compare-swiper::before,
+#comparison-container .compare-swiper::after {
+  background-color: #b0b0b0 !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: slightly darker on hover */
+#comparison-container .compare-swiper:hover {
+  background-color: #8a8a8a !important;
+}
+
+
+
+#close-info:hover {
+  color: #e34a33;
+}
+
+
+
+#info-box h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+#info-box p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+/* Navigation buttons */
+#nav-links {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 100;              /* ensures it appears above the map */
+  display: flex;
+  gap: 10px;                 /* spacing between buttons */
+}
+
+#nav-links a {
+  text-decoration: none;
+  background: white;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-family: 'Meiryo', sans-serif;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease;
+}
+
+#nav-links a:hover {
+  background: #fdbb84;       /* hover color */
+  color: #000;
+}
+
+#legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  height: 30px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  font-family: 'Meiryo', sans-serif;
+  font-size: 12px;
+  z-index: 10;
+}
+
+#gradient {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right,
+    #e34a33 0%,   /* darkest = lowest */
+    #fff5eb 100%  /* lightest = highest */
+  );
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+
+#legend .labels {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-weight: bold;
+}
+
+
+
+/* Optional: popup/info styling */
+#info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px auto auto;
+  padding: 5px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  color: #222;
+  background: #fff;
+}
+
+#year-buttons {
+  position: absolute;
+  top: 660px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  display: flex;
+  gap: 10px;
+  padding: 6px 10px;
+}
+
+.year-btn {
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.year-btn.active {
+  background: #fc8d59;
+  color: white;
+  border-color: #e34a33;
+}
+
 
 img {
-    width: 300px;
+  width: 300px;
 }
+
